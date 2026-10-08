@@ -2,6 +2,10 @@
 
 A clean, modern, and highly customizable theme built for **RetroBat** (EmulationStation engine). This theme features completely custom, high-fidelity vector assets and smooth layout integration.
 
+<img width="1920" height="1080" alt="menu" src="https://github.com/user-attachments/assets/d3fc2682-5fb0-4254-85b6-8900208c5c2f" />
+
+<img width="1920" height="1080" alt="gamelist video detailed" src="https://github.com/user-attachments/assets/1b95e4ae-298d-403d-b6c4-0b8f7ce59653" />
+
 ## 🧠 Author's Note & Journey
 
 I started studying XML coding **just one week ago** and I had never touched a single line of code in my entire life before this project! Because of that, some minor bugs might occur. I am fully committed to keeping this project alive and **I will continuously update the code** as I learn more and figure out how to implement features that I don't fully understand how to do just yet. Your patience and feedback are highly appreciated!
