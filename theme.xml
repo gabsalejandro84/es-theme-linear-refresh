@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Theme: Linear REFRESH
+version: 0.5.2
+author: Gabs
+license: creative commons CC-BY-NC-SA
+originally based on: "LINEAR theme for ES-DE"
+-->
+<theme defaultView="detailed">
+<formatVersion>7</formatVersion>
+  <aspectRatio>16:9</aspectRatio>
+  <feature supported="carousel">
+    <view name="system">
+      <sound name="directory"><path>./music</path></sound>
+	    </view>
+  </feature>
+
+  <variables>
+    <primaryFont>./assets/fonts/Gilroy-Light.ttf</primaryFont>
+    <secondaryFont>./assets/fonts/Oxygen-Regular.ttf</secondaryFont>
+    <textColorTertiary>c2c2c2ff</textColorTertiary>
+    <pixelImage>./assets/images/pixel.png</pixelImage>
+    <gradientImage>./assets/images/gradient.svg</gradientImage>
+    <gameCounterFontSize>0.032</gameCounterFontSize>
+    <systemNamePos>0.03 0.043</systemNamePos>
+    <systemNameFontSize>0.045</systemNameFontSize>
+    <systemLabelFontSize>0.035</systemLabelFontSize>
+    <textlistFontSize>0.029</textlistFontSize>
+    <descriptionFontSize>0.031</descriptionFontSize>
+    <gamelistInfoFontSize>0.03</gamelistInfoFontSize>
+    <gamelistInfoFontSizeLarge>0.032</gamelistInfoFontSizeLarge>
+    <metadataFontSize>0.03</metadataFontSize>
+    <carouselGameNameFontSize>0.05</carouselGameNameFontSize>
+    <carouselMetadataFontSize>0.03</carouselMetadataFontSize>
+    <carouselMetadataIconsSize>0.018 0</carouselMetadataIconsSize>
+    <carouselRatingSize>0.115 0.031</carouselRatingSize>
+  </variables>
+
+<!-- Buttons -->
+	
+  <subset name="helpsystem" displayName="Help Icons" default="XBOX">
+      <include name="XBOX" displayName="${XBOX}">./assets/iconsets/xbox.xml</include>
+      <include name="XBOX COLOR" displayName="${XBOX COLOR}">./assets/iconsets/xbox-color.xml</include>
+      <include name="PLAYSTATION" displayName="${PLAYSTATION}">./assets/iconsets/playstation.xml</include>
+      <include name="PLAYSTATION LEGACY" displayName="${PLAYSTATION LEGACY}">./assets/iconsets/playstation-legacy.xml</include>
+	  <include name="SWITCH" displayName="${SWITCH}">./assets/iconsets/switch.xml</include>
+  </subset>
+
+  <subset name="colorset" displayName="Color Theme" default="dark">
+    <include name="dark" displayName="Dark">./subsets/colorsets/dark.xml</include>
+	<include name="oled" displayName="Oled">./subsets/colorsets/oled.xml</include>
+    <include name="light" displayName="Light">./subsets/colorsets/light.xml</include>
+	<include name="blue" displayName="Blue">./subsets/colorsets/blue.xml</include>
+  </subset>
+  
+ <subset name="scrollSpeed" displayName="Description Speed">
+    <include name="normal" displayName="Normal (Padrão)"/>
+    <include name="slow" displayName="Slow"/>
+    <include name="fast" displayName="Fast"/>
+</subset>
+
+  <subset name="carousel-count" displayName="Visible Systems" default="5">
+    <include name="3" displayName="3 Systems"/>
+    <include name="5" displayName="5 Systems"/>
+  </subset>
+	
+  <include>./assets/iconsets/${subset.helpsystem}.xml</include>
+  <include>./views/menu.xml</include>
+  <include>./languages.xml</include>
+  <include>./subsets/colorsets/${subset.colorset}.xml</include>
+  <include>./system/metadata/_default.xml</include>
+  <include>./system/metadata/${system.theme}.xml</include>
+  <include>./system/metadata-custom/_default.xml</include>
+  <include>./system/metadata-custom/${system.theme}.xml</include>
+ 
+  
+   <!-- 1. PRIMEIRO CARREGA AS VIEWS PADRÕES (A ESTRUTURA DO TEMA) -->
+  <include>./views/detailedwithdisc.xml</include>
+  <include>./views/detailed.xml</include>
+  <include>./views/video.xml</include>
+  
+  <!-- Fundo adaptado -->
+  <view name="system, detailed, video">
+    <image name="background">
+        <pos>0 0</pos>
+        <size>1 1</size>
+        <origin>0 0</origin>
+        <path>${pixelImage}</path>
+        <tile>true</tile>
+        <color>${bgColor}</color>
+        <zIndex>0</zIndex>
+    </image>
+
+<!--barra preta inferior-->
+    <image name="help_background" extra="true"> 
+        <pos>0 0.956</pos>
+        <size>1 0.050</size>
+        <origin>0 0</origin>
+        <path>${pixelImage}</path>
+        <color>000000FF</color>
+        <zIndex>10</zIndex>
+		<storyboard>
+            <animation property="opacity" from="1" to="1" duration="0" mode="instant"/>
+            <animation property="x" from="0" to="0" duration="0" mode="instant"/>
+        </storyboard>
+    </image>
+  </view>
+  
+ 
+
+
+    <view name="screen">
+    <text name="clock" overwrite="true">
+        <pos>0.950 0.010</pos>
+        <fontPath>${primaryFont}</fontPath>
+        <fontSize>0.029</fontSize>
+        <color>ffffffff</color>
+        <size>0.15 0.05</size>
+        <text>{system.time}</text> 
+        <alignment>left</alignment>
+        <zIndex>99</zIndex>
+    </text>
+
+    <controllerActivity name="controllerActivity">
+        <visible>never</visible> 
+        <pos>-2.0 -2.0</pos>    
+        <size>0 0</size>
+    </controllerActivity>
+  </view>
+    
+  <view name="system, detailed, video">
+    <helpsystem name="help" overwrite="true">
+        <pos>0.100 0.966</pos> 
+        <origin>0 0</origin> 
+        <size>0.85 0.040</size> 
+        <textColor>ababab</textColor>
+        <iconColor>ffffffff</iconColor>
+        <fontSize>0.028</fontSize>
+        <clockFontSize>0.001</clockFontSize>
+    </helpsystem>
+  </view>
+	
+  <view name="system">
+    <carousel name="systemcarousel">
+        <pos>0.5 0.5</pos>
+        <origin>0.5 0.5</origin>
+        <color>00000000</color>
+        <backgroundColor>00000000</backgroundColor> 
+        <systemInfoDelay>300</systemInfoDelay>
+        <logoOpacity>1.00</logoOpacity> 
+        <logoColor>ffffffff</logoColor>
+		<zIndex>13</zIndex>
+        <maxLogoCount ifSubset="carousel-count:3">3</maxLogoCount>
+        <maxLogoCount ifSubset="carousel-count:5">5</maxLogoCount>
+        <size>1.0 1.0</size> 
+        <logoSize ifSubset="carousel-count:3">0.14 0.14</logoSize> 
+        <logoSize ifSubset="carousel-count:5">0.10 0.10</logoSize> 
+        <logoScale ifSubset="carousel-count:3">3.400</logoScale> 
+        <logoScale ifSubset="carousel-count:5">4.760</logoScale> 
+        <itemSpacing ifSubset="carousel-count:3">0.10</itemSpacing>
+        <itemSpacing ifSubset="carousel-count:5">0.32</itemSpacing>
+		<defaultTransition>instant</defaultTransition>
+		<scrollSound>./assets/uisounds/Klick.wav</scrollSound>
+    </carousel>
+    
+    <image name="logo">
+        <path>./system/systemart/${system.theme}.webp</path>
+        <pos>0.500 0.500</pos> 
+        <origin>0.500 0.500</origin>
+        <stationary>always</stationary> 
+        <linearSmoothing>true</linearSmoothing> 
+        <zIndex>50</zIndex> 
+        <maxSize>0.300 0.300</maxSize>
+    </image>
+    
+    <text name="systemInfo" overwrite="true">
+        <pos>0.935 0.332</pos> 
+        <size>0.165 0.03</size> 
+        <origin>0.5 0</origin>
+        <fontPath>${primaryFont}</fontPath>
+        <fontSize>${metadataFontSize}</fontSize>
+        <color>${textColorPrimary}</color> 
+        <alignment>center</alignment>
+        <zIndex>30</zIndex>
+        <text>{system.games} JOGOS</text> 
+        <storyboard>
+            <animation property="opacity" from="0" to="1" duration="400" mode="easeIn"/>
+        </storyboard>
+    </text>
+		</view>
+</theme>
