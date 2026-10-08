@@ -38,3 +38,25 @@ You can customize the experience directly from the RetroBat menu:
 
 ---
 *Note: This theme is currently optimized for 16:9 aspect ratios. Legacy 4:3 support is planned for future updates.*
+
+
+---
+
+## 🧠 Nota do Autor e Jornada (Português)
+
+Comecei a estudar programação XML **há apenas uma semana** e nunca tinha tocado em uma única linha de código na minha vida inteira antes deste projeto! Por conta disso, alguns pequenos bugs podem ocorrer. Estou totalmente comprometido em manter este projeto vivo e **atualizarei continuamente o código** à medida que aprender mais e descobrir como implementar recursos que ainda não entendo completamente como fazer. Agradeço muito pela paciência e feedback!
+
+### 🎨 Créditos e Inspiração
+Este tema foi construído com base no incrível **tema LINEAR para ES-DE (EmulationStation Desktop Edition)**. 
+*Nota:* Embora nem todos os elementos estejam 100% no mesmo lugar do design original, fiz o meu melhor para manter o layout o mais fiel, próximo e parecido possível com a experiência do LINEAR original enquanto o adaptava para o RetroBat!
+
+---
+
+## 🧠 Nota del Autor y Trayectoria (Español)
+
+¡Comencé a estudiar programación XML **hace solo una semana** y nunca antes en mi vida havia tocado una sola línea de código antes de este proyecto! Debido a esto, pueden ocurrir algunos pequeños errores. Estoy totalmente comprometido a mantener vivo este proyecto y **actualizaré continuamente el código** a medida que aprenda más y descubra cómo implementar funciones que aún no entiendo completamente cómo hacer. ¡Agradezco mucho su paciencia y comentarios!
+
+### 🎨 Créditos e Inspiración
+Este tema fue creado basado en el increíble **tema LINEAR para ES-DE (EmulationStation Desktop Edition)**. 
+*Nota:* Aunque no todos los elementos están 100% en el mismo lugar que el diseño original, ¡hice todo lo posible para mantener el diseño lo más fiel, cercano y similar posible a la experiencia LINEAR original mientras lo adaptaba para RetroBat!
+
